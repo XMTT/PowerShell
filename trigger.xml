@@ -6,11 +6,7 @@
     *[
         EventData
             [
-                (Data[@Name='Capability'] and (Data=2))
-                and
-                (Data[@Name='CapabilityChangeReason'] and (Data=5))
-                and
-                (Data[@Name='PreviousCapability' and (Data=2)])
+                Data[@Name='CapabilityChangeReason'] and (Data=5)
             ]
     ]
     </Select>
