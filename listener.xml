@@ -1,0 +1,19 @@
+<QueryList>
+  <Query Id="0" Path="Microsoft-Windows-NCSI/Operational">
+    <Select Path="Microsoft-Windows-NCSI/Operational">
+    *[System[(Level=4 or Level=0) and (EventID=4042)]]
+    and
+    *[
+        EventData
+            [
+                (Data[@Name='Capability'] and (Data=2))
+                and
+                (Data[@Name='CapabilityChangeReason'] and (Data=5))
+                and
+                (Data[@Name='PreviousCapability' and (Data=2)])
+            ]
+    ]
+    </Select>
+  </Query>
+</QueryList>
+
